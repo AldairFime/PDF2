@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ReportApp</string>
+    <string name="map_key" translatable="false">AIzaSyB2XGBJOLUiHhkuvm6-KTfvf-1Y56OQHJM</string>
+    <string name="title_activity_permisos">Permisos</string>
+    <string name="title_activity_map">MapActivity</string>
+
+</resources>
