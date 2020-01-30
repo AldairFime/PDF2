@@ -64,15 +64,7 @@
         android:id="@+id/etTexto"
         android:hint="Ingresa tu Nombre"/>
 
-        <EditText
-            android:id="@+id/etTel"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:hint="Ingresa tu Tel."
-            android:inputType="phone" />
+
 
         <EditText
             android:id="@+id/etDireec"
@@ -219,17 +211,6 @@
             android:layout_width="match_parent"
             android:layout_height="30dp" />
 
-        <Button
-            android:id="@+id/btnLlamada"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Llamar"
-
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"/>
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
 
 
 

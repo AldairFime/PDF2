@@ -55,7 +55,6 @@ public class CreacionReporte extends AppCompatActivity {
     String NOMBRE_DIRECTORIO = "MisPDFs";
 
     String NOMBRE_DOCUMENTO = null;
-    Button btnCall;
     String item;
     EditText etTexto;
     EditText Descripcion;
@@ -83,7 +82,6 @@ public class CreacionReporte extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_creacion_reporte);
-        btnCall = (Button) findViewById(R.id.btnLlamada);
         btnCamara = (Button) findViewById(R.id.btnCamara);
         imageView2 = (ImageView) findViewById(R.id.Imagen);
         btnSave = (Button) findViewById(R.id.btnCamaraSave);
@@ -97,14 +95,6 @@ public class CreacionReporte extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sendMail();
-            }
-        });
-        btnCall.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(isPermissionGranted()){
-                    call_action();
-                }
             }
         });
 
@@ -161,7 +151,7 @@ public class CreacionReporte extends AppCompatActivity {
 
         etTexto = findViewById(R.id.etTexto);
         Descripcion = findViewById(R.id.Descripcion);
-        Telefono = findViewById(R.id.etTel);
+
         Direccion = findViewById(R.id.etDireec);
         btnGenerar = findViewById(R.id.btnGenerar);
         ActionBar actionBar = getSupportActionBar();
@@ -272,7 +262,6 @@ public class CreacionReporte extends AppCompatActivity {
             documento.add(new Paragraph(  "\t\t\t\t\t\t\t\t\t\t\t\t"+"REPORTES MUNICIPIO DE JUAREZ NUEVO LEON"+  "\n\n\n\n") );
 
             documento.add(new Paragraph("Persona que realizo el reporte : " + etTexto.getText().toString() + "\n\n"));
-            documento.add(new Paragraph("Telefono " + "\n\n"+Telefono.getText().toString()+"\n\n"));
             documento.add(new Paragraph("Direccion " + "\n\n"+Direccion.getText().toString()+"\n\n"));
             documento.add(new Paragraph("Descripcion del problema: " + "\n\n"+Descripcion.getText().toString()+"\n\n"));
             documento.add(new Paragraph("Reporte de : " + item + "\n\n"));
@@ -345,6 +334,8 @@ public class CreacionReporte extends AppCompatActivity {
     }
 
 
+    /*
+
 
     @SuppressLint("MissingPermission")
     public void call_action(){
@@ -396,6 +387,6 @@ public class CreacionReporte extends AppCompatActivity {
         }
     }
 
-
+*/
 
 }
